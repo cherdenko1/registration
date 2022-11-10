@@ -10,6 +10,10 @@
                 margin: 0px;
                 font-family: sans-serif;
             }
+            input {
+                border: 2px solid #34be5b;
+                border-radius: 4px;
+            }
             /*Main Container Settings*/
             .main-container {
 
@@ -62,9 +66,9 @@
                 background-color: white;
 
                 border: 2px solid #34be5b;
-                border-radius: 4px;
+                border-radius: 10px;
 
-                font-size: 14px;
+                font-size: 18px;
                 font-weight: bold;
             }
             .register:hover {
@@ -73,6 +77,15 @@
                 border-color: #34be5b;
                 cursor:pointer;
             }
+
+            .radio-input {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+            }
+            .radio-input * {
+                margin: 2px;
+            }
         </style>
     </head>
 
@@ -80,7 +93,7 @@
         <div class="main-container">
             
             <form class="form">
-                <h1 style="text-align: center">Registration Form</h1>
+                <h1 style="text-align: center; color:#34be5b">Registration Form</h1>
                 <div class="field3">
                     <div>First Name</div>
                     <div>Last Name</div>
@@ -96,12 +109,22 @@
                     <div>Sex</div>
                     
                     <input type="date" name="birthdate">
-                    <div>
+                    <div class="radio-input">
                         <input type="radio" id="male" name="sex"><label for="male">Male</label>
                         <input type="radio" id="female" name="sex"><label for="female">Female</label>
                     </div>
                 </div>
                 
+                <div class="civil-status">
+                    <div>Civil Status</div>
+                    <div class="radio-input">
+                        <div><input type="radio" id="single" name="civil-status"><label for="single">Single</label></div>
+                        <div><input type="radio" id="married" name="civil-status"><label for="married">Married</label></div>
+                        <div><input type="radio" id="divorced" name="civil-status"><label for="divorced">Divorced</label></div>
+                        <div><input type="radio" id="widowed" name="civil-status"><label for="widowed">Widowed</label></div>
+                    </div>
+                </div>
+
                 <input style="margin-top: 20px" class="register" type="submit" value="Register">
 
             </form>
