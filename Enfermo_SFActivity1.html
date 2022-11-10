@@ -21,7 +21,7 @@
 
                 box-shadow: 5px 10px 20px rgb(184, 184, 184);
 
-                padding: 10px;
+                padding: 30px;
 
                 width: 50%;
                 height: auto;
@@ -30,6 +30,9 @@
                 top: 50%;
                 left: 50%;
                 transform: translate(-50%, -50%);
+
+                display: flex;
+                flex-direction: column;
             }
             .form table, tr, td {
                 border: 1px solid black;
@@ -37,8 +40,21 @@
 
                 padding: 2px;
             }
-            .form table {
-                margin: 15px;
+            .form * {
+                margin-top: 8px;
+            }
+
+            .field3 {
+                display: grid;
+
+                grid-template-columns: 40% 40% 20%;
+                column-gap: 2px;
+            }
+            .field2 {
+                display: grid;
+
+                grid-template-columns: 50% 50%;
+                column-gap: 6px;
             }
         </style>
     </head>
@@ -48,13 +64,28 @@
             
             <form class="form">
                 <h1 style="text-align: center">Registration Form</h1>
-                <table>
-                    <tr>
-                        <td>
-                            Hello World
-                        </td>
-                    </tr>
-                </table>
+                <div class="field3">
+                    <div>First Name</div>
+                    <div>Last Name</div>
+                    <div>Middle Initial</div>
+                    
+                    <input type="text" name="fname">
+                    <input type="text" name="lname">
+                    <input type="text" name="midname">
+                </div>
+                
+                <div class="field2">
+                    <div>Birthdate</div>
+                    <div>Gender</div>
+                    
+                    <input type="date" name="birthdate">
+                    <div>
+                        <input type="radio" id="male" name="gender"><label for="male">Male</label>
+                        <input type="radio" id="female" name="gender"><label for="female">Female</label>
+                        <input type="radio" id="undecided" name="gender"><label for="undecided">Undecided</label>
+                    </div>
+                </div>
+                
             </form>
 
         </div>
